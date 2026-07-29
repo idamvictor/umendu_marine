@@ -34,6 +34,8 @@ Also needs: Home, About, Projects/Portfolio (placeholder format until real proje
 
 Full copy is finalized in `copy.md` at the project root — treat it as the source of truth for on-page text unless the user requests changes.
 
+**Content depth (added 2026-07-29):** first pass on Home shipped too thin (5 sections). Home now carries 9: Hero, Brand strip, At a Glance stats (real countable facts only, e.g. "8 diesel engine brands," never invented metrics), Services overview, How We Work (condensed process teaser cross-linking Engineering Services), Why Choose Us, Manifesto band (tagline moment), Where We Work (coverage/location), Closing CTA. Apply the same enrichment pass (more real sections, more real photography, no invented stats/testimonials) to About, Services, Projects, and Contact in follow-up passes rather than leaving them at first-draft density.
+
 **Explicitly undecided / placeholder pending client input:** office address, phone number, WhatsApp number, business email, business hours, emergency line, years in operation, certifications/accreditations, and specific service coverage region beyond Port Harcourt. Build with clearly realistic Nigerian-format placeholder values (Port Harcourt address format, +234 phone format) rather than bracketed text, and flag them in the handoff notes as needing real values before launch.
 
 ## Brand Commitments

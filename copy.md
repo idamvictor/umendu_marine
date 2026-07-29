@@ -23,6 +23,14 @@ Caterpillar | Cummins | MAK | Niigata | Yanmar | Daihatsu | MAN B&W | Wärtsilä
 
 ---
 
+**At a Glance (stats strip):**
+8: Major diesel engine brands serviced
+3: Core service lines, one technical team
+24/7: Emergency response line
+1: Point of contact from diagnosis to delivery
+
+---
+
 **Services Overview Section**
 
 **Maintenance & Repairs**
@@ -36,6 +44,19 @@ From ET diagnosis and troubleshooting to technical consultancy and general contr
 **Other Services**
 Maritime logistics, marine procurement, technician staffing, and vessel hiring — supporting every side of your marine operations.
 [Link: View Other Services]
+
+---
+
+**How We Work (process teaser):**
+Headline: How we work, from first call to final check
+Intro: Every job, large or small, follows the same disciplined sequence. No shortcuts, no guesswork.
+
+1. **Assessment** — We start by understanding the issue or project scope in detail.
+2. **Diagnosis** — Our engineers pinpoint the exact cause or requirement.
+3. **Execution** — We carry out the work with precision, safety, and efficiency.
+4. **Follow-Up** — We ensure the solution holds and support you beyond completion.
+
+[Link: See our full engineering process] (points to Engineering Services page)
 
 ---
 
@@ -55,10 +76,26 @@ Every job is carried out with strict attention to safety standards and industry 
 
 ---
 
+**Manifesto Band (full-bleed photo statement):**
+Engineering reliability at sea.
+Every vessel we touch, every engine we open, every contract we take on carries the same standard: work that holds up long after we've left the site.
+
+---
+
+**Where We Work (coverage section):**
+Headline: Based in Port Harcourt, ready when your vessel calls
+Body: We're positioned close to Nigeria's busiest marine and oil and gas corridors, so our team can reach your engine room or job site without losing a day to logistics.
+[Displays: office address, business hours, emergency line]
+[Link: Get directions and contact details] (points to Contact page)
+
+---
+
 **Closing CTA Banner:**
 Need a technical partner you can rely on?
 Get in touch with our engineering team today.
-[Button: Contact Us] [Button: WhatsApp Us]
+[Button: Request a Quote] [Button: Chat on WhatsApp]
+
+_(Note: closing banner buttons standardized site-wide to match the primary nav CTA labels, "Request a Quote" and "Chat on WhatsApp", so the same action always carries the same label wherever it appears.)_
 
 ---
 
