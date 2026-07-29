@@ -109,22 +109,38 @@ Umendu Marine Engineering Services Limited is a marine engineering company commi
 
 Our team combines technical expertise with a hands-on, problem-solving approach — whether we're diagnosing a fault, executing a full engine overhaul, or supporting a client's broader operational needs through logistics, procurement, or staffing.
 
-We understand that in marine operations, time and reliability matter. That's why we work to deliver fast, thorough, and lasting solutions — backed by real technical knowledge, not shortcuts.
+We understand that in marine operations, time and reliability matter. That's why we work to deliver fast, thorough, and lasting solutions, backed by real technical knowledge, not shortcuts.
+
+**Who We Serve:**
+
+- **Vessel Owners & Operators** — Independent owners and operators who need a dependable technical partner for engines that can't afford downtime.
+- **Shipping & Offshore Companies** — Shipping lines and offshore operators running fleets across Nigeria's marine and oil and gas corridors.
+- **Fleet & Technical Managers** — In-house technical and fleet managers who need a responsive contractor for scheduled work and emergencies alike.
 
 **Mission Statement:**
 To provide dependable, expert-driven marine engineering and support services that keep our clients' vessels and operations running safely and efficiently.
+
+**Safety & Compliance:**
+Headline: Safety is not a checkbox
+Body: A rushed job is a liability, not a solution. Every engineer we send out carries that standard with them, on your vessel, at your dock, or in your engine room.
+
+- Documented safety protocol on every job, from routine service to full overhaul
+- Engineers trained to work safely in engine rooms, dockside, and offshore
+- Full compliance with Nigerian and international marine engineering standards
 
 **What Sets Us Apart:**
 
 - Broad experience across major diesel engine brands
 - Engineers who diagnose the root cause, not just the symptom
-- A full range of services under one roof — maintenance, engineering, logistics, and procurement
+- A full range of services under one roof: maintenance, engineering, logistics, and procurement
 - Commitment to safety, compliance, and quality workmanship
-- [Years] of experience serving the maritime sector
-- [Certifications/accreditations, if any]
+- A growing track record serving Nigeria's maritime sector
+- Committed to full compliance with Nigerian and international marine engineering standards
+
+_(Note: the two bracketed bullets from the original draft, "[Years] of experience" and "[Certifications/accreditations, if any]", were replaced rather than left as fabricated specifics. Swap in real figures/certifications here and in the "Safety & Compliance" list above as soon as the client confirms them.)_
 
 **Service Area:**
-Proudly based in [port city], Nigeria, and serving clients across [region/coverage area].
+Proudly based in Port Harcourt, Rivers State, and serving vessel operators across the region. _(Placeholder pending client confirmation of the exact coverage area, originally bracketed as [port city] / [region/coverage area].)_
 
 ---
 

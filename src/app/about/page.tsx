@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { CheckCircle } from "@phosphor-icons/react/dist/ssr";
 import { PageIntro } from "@/components/sections/page-intro";
+import { WhoWeServe } from "@/components/sections/who-we-serve";
+import { SafetyCompliance } from "@/components/sections/safety-compliance";
 import { CtaBand } from "@/components/sections/cta-band";
 import { images } from "@/lib/images";
 
@@ -67,6 +69,8 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <WhoWeServe />
+
       <section className="relative overflow-hidden bg-ink text-ink-foreground">
         <Image
           src={images.engineRoomWide}
@@ -87,6 +91,8 @@ export default function AboutPage() {
           </p>
         </div>
       </section>
+
+      <SafetyCompliance />
 
       <section className="border-t bg-background py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
