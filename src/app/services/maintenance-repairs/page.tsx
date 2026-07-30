@@ -90,6 +90,7 @@ export default function MaintenanceRepairsPage() {
         eyebrow="Maintenance & Repairs"
         title="Diesel engine maintenance and repair you can trust"
         description="Keeping your engines running smoothly is at the core of what we do. Our team provides comprehensive maintenance and repair services for diesel engines across all major brands, minimizing downtime and extending the life of your equipment."
+        images={[images.engineCloseup, images.generatorMaintenance, images.shipEngineDetail]}
       />
 
       <section className="border-b bg-background py-16 lg:py-20">

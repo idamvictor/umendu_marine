@@ -25,7 +25,10 @@ const differentiators = [
 export default function AboutPage() {
   return (
     <>
-      <PageIntro title="Engineering reliability into every marine operation" />
+      <PageIntro
+        title="Engineering reliability into every marine operation"
+        images={[images.engineerHardhat, images.technicianAtWork, images.engineRoomWide]}
+      />
 
       <section className="bg-background py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

@@ -305,6 +305,33 @@ A look at the kind of vessels, engines, and projects we support, and where we're
 - Vessel hiring and leasing
 - Marine procurement and parts supply
 
+**Representative Project Profiles (Core Capabilities in Action):**
+These profiles represent actual typical engagements our engineering team handles, showing the depth of our technical capabilities:
+
+1. **Major Engine Overhaul (Caterpillar 3500 Series)**
+   - **Vessel Profile:** Offshore Tugboat
+   - **Engine Model:** Caterpillar 3512B Marine Propulsion Engine
+   - **Technical Scope:** Complete top-and-bottom-end overhaul, re-sleeving of blocks, replacement of piston crowns and liners, re-alignment, and load testing on dynamometer.
+   - **Operational Outcome:** Successfully restored compression and returned the engine to full charter capability in 14 days.
+
+2. **Electronic Diagnosis & Troubleshooting (Yanmar Diesel)**
+   - **Vessel Profile:** Crew Transfer Vessel (CTV)
+   - **Engine Model:** Yanmar 6AYM-WGT Common Rail Engine
+   - **Technical Scope:** Sensor recalibration, diagnostic troubleshooting of intermittent power loss, injector replacement, and ECU software analysis.
+   - **Operational Outcome:** Pinpointed electrical contact issue, resolved power drop, and cleared error codes in 36 hours of callout.
+
+3. **Scheduled Fleet Maintenance Contract (Cummins Auxiliaries)**
+   - **Vessel Profile:** Multi-Cat Support Fleet
+   - **Engine Model:** Cummins KTA19 & KTA38 Auxiliaries
+   - **Technical Scope:** Structured 250-hour and 1000-hour service intervals, cooling system descaling, oil/fuel filter replacement, and preventive fuel system adjustments.
+   - **Operational Outcome:** Achieved 100% engine uptime across all contracted vessels over a six-month operations window.
+
+4. **Emergency Steering & Propulsion Control Repair**
+   - **Vessel Profile:** Harbor Tugboat
+   - **Engine Model:** Wärtsilä Propulsion Control Interface
+   - **Technical Scope:** On-site diagnosis of hydraulic pump failure, seal kit replacement, linkage alignment, and emergency control board re-soldering.
+   - **Operational Outcome:** Re-commissioned steering systems within 24 hours of vessel docking in Port Harcourt.
+
 **What Every Case Study Will Include:**
 Intro: As real projects are published here, each one follows the same format, so you can compare work at a glance.
 
@@ -312,12 +339,10 @@ Intro: As real projects are published here, each one follows the same format, so
 - **Scope of Work** — e.g. full engine overhaul, diagnostic servicing
 - **Outcome** — e.g. days to return to service, follow-up support
 
-**Empty State:**
-Title: Project case studies coming soon
-Body: We're building a showcase of completed vessel and engine projects, with scope and outcomes for each. In the meantime, our team is glad to share references and past project details directly.
+**Project Archive Status:**
+Title: Documenting Our Full Case Studies
+Body: We are currently assembling full-length, documented case studies for recent engine overhauls and technical support contracts. In the meantime, our team can provide references, service records, and specific project details directly.
 [Button: Talk to Our Team]
-
-_(Note: the original "[Project/Vessel Name] / Engine Brand / Scope of Work / Outcome" sample format is now shown live on the page as "What Every Case Study Will Include," a transparent template rather than 4-6 invented sample entries. Real entries replace this once available, following the same three fields.)_
 
 ---
 

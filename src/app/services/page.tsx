@@ -45,6 +45,7 @@ export default function ServicesIndexPage() {
       <PageIntro
         title="Services built around your vessel's uptime"
         description="From engine maintenance to logistics and procurement, every service is delivered by the same technical team."
+        images={[images.engineRoomWide, images.generatorMaintenance, images.tugboatAtSea]}
       />
 
       <section className="bg-background py-20 lg:py-28">

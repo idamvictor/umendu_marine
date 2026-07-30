@@ -65,6 +65,7 @@ export default function OtherServicesPage() {
         eyebrow="Other Services"
         title="Full support for your marine operations"
         description="We know marine operations require more than engine repairs. That's why we offer a wider range of services to support the full scope of your maritime needs."
+        images={[images.cargoShipDocked, images.portOperations, images.tugboatHarbor]}
       />
 
       <OfferList heading="What we offer" items={offers} />

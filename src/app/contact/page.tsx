@@ -76,6 +76,7 @@ export default function ContactPage() {
       <PageIntro
         title="Let's get your project moving"
         description="Whether it's an urgent repair, a technical consultation, or a service inquiry, our team is ready to help."
+        images={[images.portOperations, images.engineerHardhat, images.tugboatHarbor]}
       />
 
       <section className="bg-background py-16 lg:py-24">

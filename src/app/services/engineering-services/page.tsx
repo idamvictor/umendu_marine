@@ -84,6 +84,7 @@ export default function EngineeringServicesPage() {
         eyebrow="Engineering Services"
         title="Technical expertise for complex engineering challenges"
         description="Our engineering services go beyond repairs. We bring technical insight and consultancy to help clients diagnose problems, plan projects, and maintain their vessels to the highest standard."
+        images={[images.technicianDiagnostic, images.dieselGeneratorInspection, images.engineerWorkwear]}
       />
 
       <section className="border-b bg-background py-16 lg:py-20">
