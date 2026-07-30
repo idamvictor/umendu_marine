@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   MagnifyingGlass,
   Compass,
   Handshake,
   GearSix,
+  CheckCircle,
 } from "@phosphor-icons/react/dist/ssr";
 import { PageIntro } from "@/components/sections/page-intro";
 import { OfferList, type OfferItem } from "@/components/sections/offer-list";
 import { CtaBand } from "@/components/sections/cta-band";
 import { Button } from "@/components/ui/button";
+import { images } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Engineering Services",
@@ -67,6 +70,13 @@ const approach = [
   },
 ];
 
+const consultingScenarios = [
+  "Choosing the right engine or equipment for a new or replacement build",
+  "Planning a retrofit or major system upgrade before committing budget",
+  "A second technical opinion before signing off on a contractor's report",
+  "Reviewing operational practices for compliance and efficiency gains",
+];
+
 export default function EngineeringServicesPage() {
   return (
     <>
@@ -75,6 +85,31 @@ export default function EngineeringServicesPage() {
         title="Technical expertise for complex engineering challenges"
         description="Our engineering services go beyond repairs. We bring technical insight and consultancy to help clients diagnose problems, plan projects, and maintain their vessels to the highest standard."
       />
+
+      <section className="border-b bg-background py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+            <div className="aspect-[4/3] overflow-hidden rounded-lg">
+              <Image
+                src={images.generatorMaintenance}
+                alt="Close view of a marine diesel generator during technical work"
+                width={900}
+                height={675}
+                className="size-full object-cover"
+              />
+            </div>
+            <div>
+              <p className="text-[15px] leading-relaxed text-muted-foreground">
+                Not every problem needs a wrench first. Some need a second
+                set of trained eyes on the data, the drawings, or the
+                decision in front of you. That&apos;s where our engineering
+                services come in, alongside the hands-on repair work, not
+                instead of it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <OfferList heading="What we offer" items={offers} />
 
@@ -109,6 +144,35 @@ export default function EngineeringServicesPage() {
                 )}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t bg-background py-20 lg:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-4">
+              <h2 className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
+                Where consultancy pays off
+              </h2>
+              <p className="mt-4 max-w-sm text-[15px] leading-relaxed text-muted-foreground">
+                Clients typically bring us in before a decision gets
+                expensive to reverse.
+              </p>
+            </div>
+            <ul className="grid grid-cols-1 gap-x-8 gap-y-5 sm:grid-cols-2 lg:col-span-8">
+              {consultingScenarios.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <CheckCircle
+                    weight="fill"
+                    className="mt-0.5 size-5 shrink-0 text-primary"
+                  />
+                  <span className="text-[15px] leading-relaxed text-foreground/90">
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

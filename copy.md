@@ -164,6 +164,8 @@ Keeping your engines running smoothly is at the core of what we do. Our team pro
 - Wärtsilä
 - And other major diesel engine brands
 
+Supporting line: Whatever's under the hatch, our engineers have likely serviced it before. We keep genuine and quality-assured parts moving so a single missing component never stalls a job.
+
 **What We Offer:**
 
 **Routine Maintenance**
@@ -181,6 +183,13 @@ Thorough inspection and diagnostic services to identify issues early and keep en
 **Spare Parts Replacement**
 Genuine and quality-assured parts replacement, sourced and fitted by our technical team.
 
+**Signs Your Engine Shouldn't Wait for Its Next Service:**
+
+- **Unusual noise or vibration** — Knocking, rattling, or new vibration patterns usually point to a developing mechanical fault.
+- **Smoke or exhaust changes** — Black, blue, or white smoke that wasn't there before is a sign worth investigating quickly.
+- **Rising fuel consumption** — A sudden jump in fuel use often means the engine is working harder than it should.
+- **Dropping performance** — Slower response, reduced power, or difficulty starting are early warnings, not one-off events.
+
 **CTA:**
 Experiencing an engine issue or due for maintenance? Reach out to our team today.
 [Button: Request Service] [Button: Emergency Contact]
@@ -194,6 +203,9 @@ Technical Expertise for Complex Engineering Challenges
 
 **Intro:**
 Our engineering services go beyond repairs — we bring technical insight and consultancy to help clients diagnose problems, plan projects, and maintain their vessels to the highest standard.
+
+**Supporting note (below intro):**
+Not every problem needs a wrench first. Some need a second set of trained eyes on the data, the drawings, or the decision in front of you. That's where our engineering services come in, alongside the hands-on repair work, not instead of it.
 
 **What We Offer:**
 
@@ -215,6 +227,14 @@ Comprehensive maintenance support to keep your vessel's systems — beyond just 
 2. **Diagnosis** — Our engineers pinpoint the exact cause or requirement.
 3. **Execution** — We carry out the work with precision, safety, and efficiency.
 4. **Follow-Up** — We ensure the solution holds and support you beyond project completion.
+
+**Where Consultancy Pays Off:**
+Intro: Clients typically bring us in before a decision gets expensive to reverse.
+
+- Choosing the right engine or equipment for a new or replacement build
+- Planning a retrofit or major system upgrade before committing budget
+- A second technical opinion before signing off on a contractor's report
+- Reviewing operational practices for compliance and efficiency gains
 
 **CTA:**
 Have a technical challenge or upcoming project? Let's talk.
@@ -250,6 +270,14 @@ Reliable procurement services for marine equipment, parts, and supplies.
 **Marine Services**
 Additional marine support services designed around our clients' specific operational demands.
 
+**Featured Capabilities (photo highlights):**
+
+**Vessel hiring, without the long-term commitment**
+Short or long-term hire arrangements for operators who need extra capacity without buying it outright.
+
+**Skilled hands, deployed where you need them**
+Technicians vetted for competence, not just availability, ready to work on-site for the duration of your project.
+
 **CTA:**
 Tell us what your operation needs — we'll help you find the right solution.
 [Button: Request a Quote]
@@ -262,15 +290,34 @@ Tell us what your operation needs — we'll help you find the right solution.
 Work We're Proud Of
 
 **Intro:**
-A look at some of the vessels, engines, and projects we've supported. [Replace with real project entries once available.]
+A look at the kind of vessels, engines, and projects we support, and where we're headed as our case study archive grows.
 
-**Sample Project Entry Format:**
-**[Project/Vessel Name]**
-Engine Brand: [e.g., Cummins]
-Scope of Work: [e.g., Full engine overhaul and diagnostic servicing]
-Outcome: [e.g., Vessel returned to service within X days, zero downtime issues since]
+**Photo gallery (below intro):** four representative work photos (technical/precision work, welding, engine-room rigging, a docked cargo vessel). General capability imagery, not attributed to specific projects until real case studies exist.
 
-_(Repeat format for 4–6 entries)_
+**Engine Brands We've Worked On:** (reuses the engine brand list)
+
+**Typical Scope of Work:**
+
+- Full engine overhauls
+- Emergency breakdown response
+- Scheduled maintenance contracts
+- ET diagnosis and troubleshooting
+- Vessel hiring and leasing
+- Marine procurement and parts supply
+
+**What Every Case Study Will Include:**
+Intro: As real projects are published here, each one follows the same format, so you can compare work at a glance.
+
+- **Vessel / Engine Brand** — e.g. Cummins, MAN B&W, Wärtsilä
+- **Scope of Work** — e.g. full engine overhaul, diagnostic servicing
+- **Outcome** — e.g. days to return to service, follow-up support
+
+**Empty State:**
+Title: Project case studies coming soon
+Body: We're building a showcase of completed vessel and engine projects, with scope and outcomes for each. In the meantime, our team is glad to share references and past project details directly.
+[Button: Talk to Our Team]
+
+_(Note: the original "[Project/Vessel Name] / Engine Brand / Scope of Work / Outcome" sample format is now shown live on the page as "What Every Case Study Will Include," a transparent template rather than 4-6 invented sample entries. Real entries replace this once available, following the same three fields.)_
 
 ---
 
@@ -282,12 +329,12 @@ Let's Get Your Project Moving
 **Intro:**
 Whether it's an urgent repair, a technical consultation, or a service inquiry — our team is ready to help.
 
-**Contact Details:**
-Office Address: [Exact address, port city, Nigeria]
-Phone: [Phone number]
-WhatsApp: [WhatsApp number]
-Email: [Business email]
-Business Hours: [Hours] | Emergency Line: [24/7 number, if applicable]
+**Contact Details:** (placeholder values, pending client confirmation, see PRODUCT.md)
+Office Address: 14 Woji Road, GRA Phase 2, Port Harcourt, Rivers State, Nigeria
+Phone: +234 84 461 2200
+WhatsApp: +234 803 214 7765
+Email: info@umendumarine.com
+Business Hours: Mon - Sat, 8:00am - 6:00pm | Emergency Line: answered 24/7
 
 **Contact Form Fields:**
 
@@ -296,6 +343,12 @@ Business Hours: [Hours] | Emergency Line: [24/7 number, if applicable]
 - Service Needed (dropdown: Maintenance & Repairs / Engineering Services / Other Services)
 - Message
 - [Submit Button: Send Message]
+
+**What Happens Next (below the form):**
+
+1. **You send the details** — Fill out the form or message us directly with your vessel, engine, or the issue you're facing.
+2. **Our team reviews it** — An engineer looks at what you've shared and works out what's needed, not a generic sales script.
+3. **We respond, fast** — Usually within one business day, sooner for anything flagged as an emergency.
 
 **Closing Line:**
 We respond quickly because we know your time — and your vessel's uptime — matters.

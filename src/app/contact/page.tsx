@@ -1,14 +1,19 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import {
   MapPin,
   Phone,
   EnvelopeSimple,
   Clock,
   WhatsappLogo,
+  PaperPlaneTilt,
+  UsersThree,
+  ChatCircleText,
 } from "@phosphor-icons/react/dist/ssr";
 import { PageIntro } from "@/components/sections/page-intro";
 import { ContactForm } from "@/components/sections/contact-form";
 import { contact, whatsappHref } from "@/lib/site";
+import { images } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -47,6 +52,24 @@ const details = [
   },
 ];
 
+const nextSteps = [
+  {
+    icon: PaperPlaneTilt,
+    title: "You send the details",
+    description: "Fill out the form or message us directly with your vessel, engine, or the issue you're facing.",
+  },
+  {
+    icon: UsersThree,
+    title: "Our team reviews it",
+    description: "An engineer looks at what you've shared and works out what's needed, not a generic sales script.",
+  },
+  {
+    icon: ChatCircleText,
+    title: "We respond, fast",
+    description: "Usually within one business day, sooner for anything flagged as an emergency.",
+  },
+];
+
 export default function ContactPage() {
   return (
     <>
@@ -59,6 +82,15 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-4">
+              <div className="mb-8 aspect-[4/3] overflow-hidden rounded-lg">
+                <Image
+                  src={images.engineerHardhat}
+                  alt="Marine engineer checking messages on site"
+                  width={700}
+                  height={525}
+                  className="size-full object-cover"
+                />
+              </div>
               <h2 className="text-lg font-semibold">Contact details</h2>
               <ul className="mt-6 flex flex-col gap-6">
                 {details.map((detail) => (
@@ -95,6 +127,23 @@ export default function ContactPage() {
                 <ContactForm />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t bg-secondary/40 py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-xl font-semibold">What happens next</h2>
+          <div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-3">
+            {nextSteps.map((step) => (
+              <div key={step.title} className="border-t pt-5">
+                <step.icon className="size-6 text-primary" weight="duotone" />
+                <h3 className="mt-3.5 text-base font-semibold">{step.title}</h3>
+                <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">
+                  {step.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

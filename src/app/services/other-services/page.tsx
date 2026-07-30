@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import {
   Truck,
   Package,
@@ -10,6 +11,7 @@ import {
 import { PageIntro } from "@/components/sections/page-intro";
 import { OfferList, type OfferItem } from "@/components/sections/offer-list";
 import { CtaBand } from "@/components/sections/cta-band";
+import { images } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Other Services",
@@ -66,6 +68,51 @@ export default function OtherServicesPage() {
       />
 
       <OfferList heading="What we offer" items={offers} />
+
+      <section className="border-t bg-background py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+            <div className="relative flex min-h-80 flex-col justify-end overflow-hidden rounded-lg p-7">
+              <Image
+                src={images.tugboatHarbor}
+                alt="Tugboat available for hire in harbor"
+                fill
+                sizes="(min-width: 1024px) 45vw, 90vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent" />
+              <div className="relative">
+                <h3 className="text-xl font-semibold text-ink-foreground">
+                  Vessel hiring, without the long-term commitment
+                </h3>
+                <p className="mt-2 max-w-sm text-sm leading-relaxed text-ink-foreground/80">
+                  Short or long-term hire arrangements for operators who
+                  need extra capacity without buying it outright.
+                </p>
+              </div>
+            </div>
+            <div className="relative flex min-h-80 flex-col justify-end overflow-hidden rounded-lg p-7">
+              <Image
+                src={images.welderAtWork}
+                alt="Technician available for on-site marine work"
+                fill
+                sizes="(min-width: 1024px) 45vw, 90vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent" />
+              <div className="relative">
+                <h3 className="text-xl font-semibold text-ink-foreground">
+                  Skilled hands, deployed where you need them
+                </h3>
+                <p className="mt-2 max-w-sm text-sm leading-relaxed text-ink-foreground/80">
+                  Technicians vetted for competence, not just availability,
+                  ready to work on-site for the duration of your project.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <CtaBand
         title="Tell us what your operation needs."
