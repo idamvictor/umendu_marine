@@ -86,7 +86,7 @@ export function EmailCaptureDialog() {
             </DialogClose>
 
             {status === "submitted" ? (
-              <div className="flex flex-1 flex-col justify-center gap-3 py-4">
+              <div className="motion-safe:animate-in motion-safe:fade-in-0 motion-safe:zoom-in-95 flex flex-1 flex-col justify-center gap-3 py-4 duration-200 ease-out">
                 <CheckCircle className="size-8 text-primary" weight="duotone" />
                 <DialogTitle className="text-xl font-semibold tracking-tight">
                   You&apos;re on the list

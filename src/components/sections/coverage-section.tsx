@@ -36,10 +36,10 @@ export function CoverageSection() {
 
             <Link
               href="/contact"
-              className="mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-primary"
+              className="group mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-primary"
             >
               Get directions and contact details
-              <ArrowRight className="size-3.5" />
+              <ArrowRight className="size-3.5 transition-transform duration-300 ease-out group-hover:translate-x-0.5" />
             </Link>
           </div>
 

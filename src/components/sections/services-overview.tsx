@@ -54,7 +54,7 @@ export function ServicesOverview() {
               key={service.href}
               href={service.href}
               className={cn(
-                "group relative flex flex-col justify-end overflow-hidden rounded-lg",
+                "group relative flex flex-col justify-end overflow-hidden rounded-lg transition-transform duration-150 ease-out active:scale-[0.98]",
                 service.span,
                 service.aspect
               )}
@@ -64,7 +64,7 @@ export function ServicesOverview() {
                 alt={service.alt}
                 fill
                 sizes="(min-width: 1024px) 40vw, 90vw"
-                className="object-cover"
+                className="object-cover transition-transform duration-300 ease-out group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/35 to-transparent transition-opacity duration-300 group-hover:from-ink/95" />
               <div className="relative p-6 lg:p-7">

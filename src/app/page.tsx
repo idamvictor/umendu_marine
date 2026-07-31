@@ -8,20 +8,37 @@ import { ManifestoBand } from "@/components/sections/manifesto-band";
 import { CoverageSection } from "@/components/sections/coverage-section";
 import { CtaBand } from "@/components/sections/cta-band";
 import { EmailCaptureDialog } from "@/components/sections/email-capture-dialog";
+import { ScrollReveal } from "@/components/scroll-reveal";
 
 export default function Home() {
   return (
     <>
       <EmailCaptureDialog />
       <HomeHero />
-      <BrandStrip />
-      <StatsStrip />
-      <ServicesOverview />
-      <ProcessTeaser />
-      <WhyChooseUs />
-      <ManifestoBand />
-      <CoverageSection />
-      <CtaBand />
+      <ScrollReveal>
+        <BrandStrip />
+      </ScrollReveal>
+      <ScrollReveal>
+        <StatsStrip />
+      </ScrollReveal>
+      <ScrollReveal>
+        <ServicesOverview />
+      </ScrollReveal>
+      <ScrollReveal>
+        <ProcessTeaser />
+      </ScrollReveal>
+      <ScrollReveal>
+        <WhyChooseUs />
+      </ScrollReveal>
+      <ScrollReveal>
+        <ManifestoBand />
+      </ScrollReveal>
+      <ScrollReveal>
+        <CoverageSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <CtaBand />
+      </ScrollReveal>
     </>
   );
 }

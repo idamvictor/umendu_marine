@@ -70,10 +70,10 @@ export function ProcessTeaser() {
 
             <Link
               href="/services/engineering-services"
-              className="mt-9 inline-flex items-center gap-1.5 text-sm font-medium text-primary"
+              className="group mt-9 inline-flex items-center gap-1.5 text-sm font-medium text-primary"
             >
               See our full engineering process
-              <ArrowRight className="size-3.5" />
+              <ArrowRight className="size-3.5 transition-transform duration-300 ease-out group-hover:translate-x-0.5" />
             </Link>
           </div>
         </div>

@@ -3,10 +3,10 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Phone } from "@phosphor-icons/react/dist/ssr";
+import { ArrowRight, WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
 import { Button } from "@/components/ui/button";
 import { images as siteImages } from "@/lib/images";
-import { contact } from "@/lib/site";
+import { whatsappHref } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const homeHeroImages = [
@@ -77,9 +77,13 @@ export function HomeHero() {
               variant="outline"
               className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white"
             >
-              <a href={contact.mobileHref}>
-                <Phone data-icon="inline-start" />
-                Talk to an Engineer
+              <a
+                href={whatsappHref("Hello, I'd like to speak with an engineer about my vessel.")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <WhatsappLogo data-icon="inline-start" weight="fill" />
+                Chat on WhatsApp
               </a>
             </Button>
           </div>
