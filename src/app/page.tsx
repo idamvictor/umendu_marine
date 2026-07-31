@@ -7,10 +7,12 @@ import { WhyChooseUs } from "@/components/sections/why-choose-us";
 import { ManifestoBand } from "@/components/sections/manifesto-band";
 import { CoverageSection } from "@/components/sections/coverage-section";
 import { CtaBand } from "@/components/sections/cta-band";
+import { EmailCaptureDialog } from "@/components/sections/email-capture-dialog";
 
 export default function Home() {
   return (
     <>
+      <EmailCaptureDialog />
       <HomeHero />
       <BrandStrip />
       <StatsStrip />

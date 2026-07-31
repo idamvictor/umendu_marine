@@ -1,18 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
-import { Anchor, ArrowRight, FileText } from "@phosphor-icons/react/dist/ssr";
+import { FileText } from "@phosphor-icons/react/dist/ssr";
 import { PageIntro } from "@/components/sections/page-intro";
 import { CtaBand } from "@/components/sections/cta-band";
-import {
-  Empty,
-  EmptyHeader,
-  EmptyMedia,
-  EmptyTitle,
-  EmptyDescription,
-  EmptyContent,
-} from "@/components/ui/empty";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { engineBrands } from "@/lib/site";
 import { images } from "@/lib/images";
@@ -305,35 +295,6 @@ export default function ProjectsPage() {
               ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="bg-secondary/40 pb-20 lg:pb-28">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <Empty className="rounded-lg border-none bg-card p-10 shadow-sm lg:p-14">
-            <EmptyHeader>
-              <EmptyMedia variant="icon">
-                <Anchor weight="duotone" />
-              </EmptyMedia>
-              <EmptyTitle className="text-lg">
-                Documenting Our Full Case Studies
-              </EmptyTitle>
-              <EmptyDescription>
-                We are currently assembling full-length, documented case studies
-                for recent engine overhauls and technical support contracts. In
-                the meantime, our team can provide references, service records,
-                and specific project details directly.
-              </EmptyDescription>
-            </EmptyHeader>
-            <EmptyContent>
-              <Button asChild>
-                <Link href="/contact">
-                  Talk to Our Team
-                  <ArrowRight data-icon="inline-end" />
-                </Link>
-              </Button>
-            </EmptyContent>
-          </Empty>
         </div>
       </section>
 
