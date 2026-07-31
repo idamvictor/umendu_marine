@@ -12,6 +12,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import { PageIntro } from "@/components/sections/page-intro";
 import { ContactForm } from "@/components/sections/contact-form";
+import { ContactMap } from "@/components/sections/contact-map";
 import { contact, whatsappHref } from "@/lib/site";
 import { images } from "@/lib/images";
 
@@ -126,6 +127,9 @@ export default function ContactPage() {
             <div className="lg:col-span-8">
               <div className="rounded-lg border bg-card p-6 sm:p-8">
                 <ContactForm />
+              </div>
+              <div className="mt-6">
+                <ContactMap />
               </div>
             </div>
           </div>
