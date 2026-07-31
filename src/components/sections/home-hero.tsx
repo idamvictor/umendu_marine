@@ -27,8 +27,8 @@ export function HomeHero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-ink text-ink-foreground min-h-[500px] sm:min-h-[550px] lg:min-h-[600px] flex items-center">
-      {/* Background Carousel */}
+    <section className="relative overflow-hidden bg-ink text-ink-foreground">
+      {/* Background Carousel behind the whole section */}
       <div className="absolute inset-0 z-0">
         {homeHeroImages.map((img, index) => (
           <div
@@ -43,18 +43,19 @@ export function HomeHero() {
               alt=""
               fill
               priority={index === 0}
-              className="object-cover animate-fade-in"
+              className="object-cover"
               sizes="100vw"
             />
           </div>
         ))}
         {/* Dark overlay for contrast */}
-        <div className="absolute inset-0 bg-black/70 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-black/75 mix-blend-multiply" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-black/20 to-black/35" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl w-full px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-        <div className="max-w-2xl">
+      {/* Content grid sitting on top of the carousel */}
+      <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 pt-14 pb-16 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:pt-20 lg:pb-24">
+        <div>
           <h1 className="text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl lg:text-[3.4rem] lg:leading-[1.05]">
             Reliable marine engineering. Anywhere your vessel needs us.
           </h1>
@@ -82,6 +83,18 @@ export function HomeHero() {
               </a>
             </Button>
           </div>
+        </div>
+
+        {/* Featured Cloudinary image on the right */}
+        <div className="relative aspect-[4/3] overflow-hidden rounded-lg lg:aspect-[5/4] shadow-xl">
+          <Image
+            src="https://res.cloudinary.com/dyp8gtllq/image/upload/v1785413740/after_1_pzepkm.png"
+            alt="Umendu Marine engine room and technical team services"
+            fill
+            priority
+            sizes="(min-width: 1024px) 42vw, 90vw"
+            className="object-cover"
+          />
         </div>
       </div>
     </section>

@@ -47,28 +47,39 @@ export function SiteHeader() {
                   <NavigationMenuItem key={link.label}>
                     <NavigationMenuTrigger
                       className={cn(
-                        "bg-transparent text-[13.5px] font-medium text-ink-foreground/85 hover:bg-white/8 hover:text-ink-foreground focus:bg-white/8 data-open:bg-white/8 data-open:text-ink-foreground",
-                        isActive && "text-ink-foreground"
+                        "bg-transparent text-[13.5px] font-medium transition-colors hover:!bg-white/8 focus:!bg-white/8 data-open:!bg-white/8",
+                        isActive
+                          ? "text-primary bg-white/5 font-semibold"
+                          : "text-ink-foreground/85 hover:!text-ink-foreground data-open:!text-ink-foreground"
                       )}
                     >
                       {link.label}
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className="grid w-[320px] gap-1 p-1">
-                        {link.children.map((child) => (
-                          <li key={child.href}>
-                            <NavigationMenuLink asChild>
-                              <Link href={child.href} className="flex-col items-start gap-0.5">
-                                <span className="text-sm font-medium">
-                                  {child.label}
-                                </span>
-                                <span className="text-xs text-muted-foreground">
-                                  {child.description}
-                                </span>
-                              </Link>
-                            </NavigationMenuLink>
-                          </li>
-                        ))}
+                        {link.children.map((child) => {
+                          const isChildActive = pathname === child.href;
+                          return (
+                            <li key={child.href}>
+                              <NavigationMenuLink asChild active={isChildActive}>
+                                <Link
+                                  href={child.href}
+                                  className={cn(
+                                    "flex-col items-start gap-0.5 transition-colors",
+                                    isChildActive ? "text-primary" : "text-foreground"
+                                  )}
+                                >
+                                  <span className="text-sm font-medium">
+                                    {child.label}
+                                  </span>
+                                  <span className="text-xs text-muted-foreground">
+                                    {child.description}
+                                  </span>
+                                </Link>
+                              </NavigationMenuLink>
+                            </li>
+                          );
+                        })}
                       </ul>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
@@ -76,14 +87,16 @@ export function SiteHeader() {
               }
               return (
                 <NavigationMenuItem key={link.label}>
-                  <NavigationMenuLink asChild>
-                    <Link
-                      href={link.href}
-                      className={cn(
-                        "rounded-lg px-2.5 py-1.5 text-[13.5px] font-medium text-ink-foreground/85 hover:bg-white/8 hover:text-ink-foreground",
-                        isActive && "text-ink-foreground"
-                      )}
-                    >
+                  <NavigationMenuLink
+                    asChild
+                    className={cn(
+                      "rounded-lg px-2.5 py-1.5 text-[13.5px] font-medium transition-colors hover:!bg-white/8 focus:!bg-white/8",
+                      isActive
+                        ? "text-primary bg-white/5 font-semibold"
+                        : "text-ink-foreground/85 hover:!text-ink-foreground"
+                    )}
+                  >
+                    <Link href={link.href}>
                       {link.label}
                     </Link>
                   </NavigationMenuLink>
@@ -94,7 +107,7 @@ export function SiteHeader() {
         </NavigationMenu>
 
         <div className="hidden items-center gap-2 lg:flex">
-          <Button asChild variant="ghost" className="text-ink-foreground hover:bg-white/8 hover:text-ink-foreground">
+          <Button asChild variant="ghost" className="text-ink-foreground hover:!bg-white/8 hover:!text-ink-foreground focus:!bg-white/8">
             <a href={whatsappHref("Hello, I'd like to speak with an engineer about my vessel.")} target="_blank" rel="noopener noreferrer">
               <WhatsappLogo data-icon="inline-start" weight="fill" />
               WhatsApp
@@ -113,7 +126,7 @@ export function SiteHeader() {
             <Button
               variant="ghost"
               size="icon"
-              className="text-ink-foreground hover:bg-white/8 hover:text-ink-foreground lg:hidden"
+              className="text-ink-foreground hover:!bg-white/8 hover:!text-ink-foreground focus:!bg-white/8 lg:hidden"
               aria-label="Open menu"
             >
               <List />
@@ -126,34 +139,56 @@ export function SiteHeader() {
               </SheetTitle>
             </SheetHeader>
             <nav className="flex flex-col gap-1 px-3 py-4">
-              {navLinks.map((link) =>
-                "children" in link && link.children ? (
-                  <div key={link.label} className="flex flex-col">
-                    <span className="px-3 pt-3 pb-1 text-xs font-medium tracking-wide text-muted-foreground uppercase">
-                      {link.label}
-                    </span>
-                    {link.children.map((child) => (
-                      <SheetClose asChild key={child.href}>
-                        <Link
-                          href={child.href}
-                          className="rounded-md px-3 py-2.5 text-[15px] font-medium hover:bg-muted"
-                        >
-                          {child.label}
-                        </Link>
-                      </SheetClose>
-                    ))}
-                  </div>
-                ) : (
+              {navLinks.map((link) => {
+                const isLinkActive =
+                  link.href === "/"
+                    ? pathname === "/"
+                    : pathname.startsWith(link.href);
+                
+                if ("children" in link && link.children) {
+                  return (
+                    <div key={link.label} className="flex flex-col">
+                      <span className="px-3 pt-3 pb-1 text-xs font-medium tracking-wide text-muted-foreground uppercase">
+                        {link.label}
+                      </span>
+                      {link.children.map((child) => {
+                        const isChildActive = pathname === child.href;
+                        return (
+                          <SheetClose asChild key={child.href}>
+                            <Link
+                              href={child.href}
+                              className={cn(
+                                "rounded-md px-3 py-2.5 text-[15px] font-medium transition-colors",
+                                isChildActive
+                                  ? "bg-primary/10 text-primary border-l-2 border-primary rounded-l-none pl-2.5"
+                                  : "text-foreground/80 hover:bg-muted"
+                              )}
+                            >
+                              {child.label}
+                            </Link>
+                          </SheetClose>
+                        );
+                      })}
+                    </div>
+                  );
+                }
+                
+                return (
                   <SheetClose asChild key={link.label}>
                     <Link
                       href={link.href}
-                      className="rounded-md px-3 py-2.5 text-[15px] font-medium hover:bg-muted"
+                      className={cn(
+                        "rounded-md px-3 py-2.5 text-[15px] font-medium transition-colors",
+                        isLinkActive
+                          ? "bg-primary/10 text-primary border-l-2 border-primary rounded-l-none pl-2.5"
+                          : "text-foreground/80 hover:bg-muted"
+                      )}
                     >
                       {link.label}
                     </Link>
                   </SheetClose>
-                )
-              )}
+                );
+              })}
             </nav>
             <SheetFooter className="border-t">
               <Button asChild variant="outline">
