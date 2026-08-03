@@ -3,7 +3,12 @@
 import * as React from "react";
 import NextImage from "next/image";
 import { XIcon } from "lucide-react";
-import { EnvelopeSimple, ArrowRight, CheckCircle } from "@phosphor-icons/react";
+import {
+  EnvelopeSimple,
+  ArrowRight,
+  CheckCircle,
+  Spinner,
+} from "@phosphor-icons/react";
 import {
   Dialog,
   DialogContent,
@@ -24,9 +29,9 @@ const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 export function EmailCaptureDialog() {
   const [open, setOpen] = React.useState(false);
   const [email, setEmail] = React.useState("");
-  const [status, setStatus] = React.useState<"idle" | "invalid" | "submitted">(
-    "idle"
-  );
+  const [status, setStatus] = React.useState<
+    "idle" | "invalid" | "submitting" | "submitted" | "error"
+  >("idle");
 
   React.useEffect(() => {
     if (sessionStorage.getItem(SESSION_KEY)) return;
@@ -39,15 +44,31 @@ export function EmailCaptureDialog() {
     return () => clearTimeout(timer);
   }, []);
 
-  function handleSubmit(event: React.FormEvent) {
+  async function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
     if (!EMAIL_PATTERN.test(email)) {
       setStatus("invalid");
       return;
     }
-    // UI-only for now: no email-list provider wired up yet, same
-    // placeholder status as /api/contact until one is chosen.
-    setStatus("submitted");
+
+    setStatus("submitting");
+
+    try {
+      const response = await fetch("/api/lead-capture", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!response.ok) {
+        setStatus("error");
+        return;
+      }
+
+      setStatus("submitted");
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -122,7 +143,7 @@ export function EmailCaptureDialog() {
                   noValidate
                   className="mt-1 flex flex-col gap-3"
                 >
-                  <Field data-invalid={status === "invalid"}>
+                  <Field data-invalid={status === "invalid" || status === "error"}>
                     <FieldLabel htmlFor="email-capture" className="sr-only">
                       Email address
                     </FieldLabel>
@@ -134,11 +155,12 @@ export function EmailCaptureDialog() {
                         type="email"
                         autoComplete="email"
                         placeholder="you@company.com"
-                        aria-invalid={status === "invalid"}
+                        aria-invalid={status === "invalid" || status === "error"}
                         value={email}
                         onChange={(e) => {
                           setEmail(e.target.value);
-                          if (status === "invalid") setStatus("idle");
+                          if (status === "invalid" || status === "error")
+                            setStatus("idle");
                         }}
                         className="h-11 rounded-lg pl-9 text-[15px]"
                       />
@@ -147,13 +169,28 @@ export function EmailCaptureDialog() {
                       errors={
                         status === "invalid"
                           ? [{ message: "Enter a valid email address." }]
-                          : undefined
+                          : status === "error"
+                            ? [{ message: "Something went wrong. Please try again." }]
+                            : undefined
                       }
                     />
                   </Field>
-                  <Button type="submit" className="h-11 w-full text-[15px]">
-                    Notify Me
-                    <ArrowRight data-icon="inline-end" />
+                  <Button
+                    type="submit"
+                    disabled={status === "submitting"}
+                    className="h-11 w-full text-[15px]"
+                  >
+                    {status === "submitting" ? (
+                      <>
+                        <Spinner data-icon="inline-start" className="animate-spin" />
+                        Sending
+                      </>
+                    ) : (
+                      <>
+                        Notify Me
+                        <ArrowRight data-icon="inline-end" />
+                      </>
+                    )}
                   </Button>
                   <p className="text-center text-xs text-muted-foreground">
                     No spam, ever. Unsubscribe anytime.
