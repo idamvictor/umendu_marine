@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import { images } from "@/lib/images";
 import { cn } from "@/lib/utils";
+import { StaggerReveal } from "@/components/stagger-reveal";
 
 const services = [
   {
@@ -49,38 +50,37 @@ export function ServicesOverview() {
         </h2>
 
         <div className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-3 lg:grid-rows-2">
-          {services.map((service) => (
-            <Link
-              key={service.href}
-              href={service.href}
-              className={cn(
-                "group relative flex flex-col justify-end overflow-hidden rounded-lg transition-transform duration-150 ease-out active:scale-[0.98]",
-                service.span,
-                service.aspect
-              )}
-            >
-              <Image
-                src={service.image}
-                alt={service.alt}
-                fill
-                sizes="(min-width: 1024px) 40vw, 90vw"
-                className="object-cover transition-transform duration-300 ease-out group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/35 to-transparent transition-opacity duration-300 group-hover:from-ink/95" />
-              <div className="relative p-6 lg:p-7">
-                <h3 className="text-xl font-semibold text-ink-foreground">
-                  {service.title}
-                </h3>
-                <p className="mt-2 max-w-sm text-sm leading-relaxed text-ink-foreground/80">
-                  {service.description}
-                </p>
-                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-primary">
-                  {service.linkLabel}
-                  <ArrowRight className="size-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
-                </span>
+          <StaggerReveal distance={24} duration={600} staggerMs={100}>
+            {services.map((service) => (
+              <div key={service.href} className={cn(service.span, service.aspect)}>
+                <Link
+                  href={service.href}
+                  className="group relative flex size-full flex-col justify-end overflow-hidden rounded-lg transition-transform duration-150 ease-out active:scale-[0.98]"
+                >
+                  <Image
+                    src={service.image}
+                    alt={service.alt}
+                    fill
+                    sizes="(min-width: 1024px) 40vw, 90vw"
+                    className="object-cover transition-transform duration-300 ease-out group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/35 to-transparent transition-opacity duration-300 group-hover:from-ink/95" />
+                  <div className="relative p-6 lg:p-7">
+                    <h3 className="text-xl font-semibold text-ink-foreground">
+                      {service.title}
+                    </h3>
+                    <p className="mt-2 max-w-sm text-sm leading-relaxed text-ink-foreground/80">
+                      {service.description}
+                    </p>
+                    <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-primary">
+                      {service.linkLabel}
+                      <ArrowRight className="size-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
+                    </span>
+                  </div>
+                </Link>
               </div>
-            </Link>
-          ))}
+            ))}
+          </StaggerReveal>
         </div>
       </div>
     </section>

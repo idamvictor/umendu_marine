@@ -18,19 +18,13 @@ export default function Home() {
       <ScrollReveal>
         <BrandStrip />
       </ScrollReveal>
-      <ScrollReveal>
-        <StatsStrip />
-      </ScrollReveal>
-      <ScrollReveal>
-        <ServicesOverview />
-      </ScrollReveal>
-      <ScrollReveal>
-        <ProcessTeaser />
-      </ScrollReveal>
-      <ScrollReveal>
-        <WhyChooseUs />
-      </ScrollReveal>
-      <ScrollReveal>
+      {/* StatsStrip, ServicesOverview, ProcessTeaser, and WhyChooseUs each
+          stagger their own items via StaggerReveal internally. */}
+      <StatsStrip />
+      <ServicesOverview />
+      <ProcessTeaser />
+      <WhyChooseUs />
+      <ScrollReveal distance={32} duration={900}>
         <ManifestoBand />
       </ScrollReveal>
       <ScrollReveal>

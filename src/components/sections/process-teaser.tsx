@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import { images } from "@/lib/images";
+import { StaggerReveal } from "@/components/stagger-reveal";
 
 const steps = [
   {
@@ -53,19 +54,21 @@ export function ProcessTeaser() {
             </p>
 
             <div className="mt-10 grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2">
-              {steps.map((item) => (
-                <div key={item.step} className="flex items-start gap-4">
-                  <span className="font-mono text-sm text-primary">
-                    {item.step}
-                  </span>
-                  <div>
-                    <h3 className="text-base font-semibold">{item.title}</h3>
-                    <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
-                      {item.description}
-                    </p>
+              <StaggerReveal distance={16} duration={500} staggerMs={100}>
+                {steps.map((item) => (
+                  <div key={item.step} className="flex items-start gap-4">
+                    <span className="font-mono text-sm text-primary">
+                      {item.step}
+                    </span>
+                    <div>
+                      <h3 className="text-base font-semibold">{item.title}</h3>
+                      <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </StaggerReveal>
             </div>
 
             <Link
