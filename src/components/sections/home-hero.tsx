@@ -90,7 +90,7 @@ export function HomeHero() {
         </div>
 
         {/* Featured Cloudinary image on the right */}
-        <div className="relative aspect-[4/3] overflow-hidden rounded-lg lg:aspect-[5/4] shadow-xl">
+        <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-xl lg:aspect-5/4 lg:w-[85%] lg:justify-self-end">
           <Image
             src="https://res.cloudinary.com/dyp8gtllq/image/upload/v1785413740/after_1_pzepkm.png"
             alt="Umendu Marine engine room and technical team services"
