@@ -9,7 +9,7 @@ export const contact = {
   phoneHref: "tel:+2348446122200",
   mobileDisplay: "+234 803 214 7765",
   mobileHref: "tel:+2348032147765",
-  whatsappNumber: "2348032147765",
+  whatsappNumber: "2349063163794",
   emailDisplay: "info@umendumarine.com",
   emailHref: "mailto:info@umendumarine.com",
   hours: "Mon - Sat, 8:00am - 6:00pm",
