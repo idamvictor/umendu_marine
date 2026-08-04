@@ -1,32 +1,37 @@
-// Real, verified Unsplash photography (industrial / marine engineering
-// subjects). No stock-agency placeholders or generated fakes -- every id
-// below resolves to a real photo. Replace with the client's own photography
-// as it becomes available (see PRODUCT.md "Evidence on Hand").
+// Real Umendu Marine Services photography, hosted on Cloudinary.
 
-function unsplash(id: string, params = "q=80&auto=format&fit=crop") {
-  return `https://images.unsplash.com/photo-${id}?${params}`;
-}
+const A = "https://res.cloudinary.com/dyp8gtllq/image/upload/v1785873839/WhatsApp_Image_2026-08-04_at_3.50.38_PM_ihdctp.jpg";
+const B = "https://res.cloudinary.com/dyp8gtllq/image/upload/v1785873839/WhatsApp_Image_2026-08-04_at_3.50.52_PM_1_egagtk.jpg";
+const C = "https://res.cloudinary.com/dyp8gtllq/image/upload/v1785873839/WhatsApp_Image_2026-08-04_at_3.50.51_PM_wpn6xp.jpg";
+const D = "https://res.cloudinary.com/dyp8gtllq/image/upload/v1785873839/WhatsApp_Image_2026-08-04_at_3.50.30_PM_mbedlb.jpg";
+const E = "https://res.cloudinary.com/dyp8gtllq/image/upload/v1785873840/WhatsApp_Image_2026-08-04_at_4.21.15_PM_dck79b.jpg";
+const F = "https://res.cloudinary.com/dyp8gtllq/image/upload/v1785873840/WhatsApp_Image_2026-08-04_at_3.50.50_PM_vbfpvi.jpg";
+const G = "https://res.cloudinary.com/dyp8gtllq/image/upload/v1785873840/WhatsApp_Image_2026-08-04_at_4.20.41_PM_il7oqa.jpg";
+const H = "https://res.cloudinary.com/dyp8gtllq/image/upload/v1785873839/WhatsApp_Image_2026-08-04_at_3.50.52_PM_2_txypw1.jpg";
+const I = "https://res.cloudinary.com/dyp8gtllq/image/upload/v1785873841/WhatsApp_Image_2026-08-04_at_4.21.14_PM_mkjjno.jpg";
+const J = "https://res.cloudinary.com/dyp8gtllq/image/upload/v1785873841/WhatsApp_Image_2026-08-04_at_4.20.57_PM_b8hiad.jpg";
+const K = "https://res.cloudinary.com/dyp8gtllq/image/upload/v1785873841/WhatsApp_Image_2026-08-04_at_3.50.52_PM_axjxk9.jpg";
 
 export const images = {
-  heroEngineRoom: unsplash("1660543228631-3f2341090afe", "q=80&w=1800&auto=format&fit=crop"),
-  engineRoomWide: unsplash("1652837135894-cd1d7f74588a", "q=80&w=1800&auto=format&fit=crop"),
-  engineCloseup: unsplash("1523559094051-53bac879eb80", "q=80&w=1400&auto=format&fit=crop"),
-  engineParts: unsplash("1652837135986-d737901cc7d7", "q=80&w=1400&auto=format&fit=crop"),
-  shipEngineDetail: unsplash("1608062720349-a044e289748b", "q=80&w=1400&auto=format&fit=crop"),
-  technicianAtWork: unsplash("1581092160562-40aa08e78837", "q=80&w=1400&auto=format&fit=crop"),
-  technicianDiagnostic: unsplash("1621905251918-48416bd8575a", "q=80&w=1400&auto=format&fit=crop"),
-  technicianTools: unsplash("1581092163144-b7ae3c00adbc", "q=80&w=1400&auto=format&fit=crop"),
-  welderAtWork: unsplash("1455165814004-1126a7199f9b", "q=80&w=1400&auto=format&fit=crop"),
-  welderSparks: unsplash("1508188609340-e8068b599193", "q=80&w=1400&auto=format&fit=crop"),
-  cargoPortCranes: unsplash("1606185540834-d6e7483ee1a4", "q=80&w=1800&auto=format&fit=crop"),
-  cargoShipDocked: unsplash("1670121180530-cfcba4438038", "q=80&w=1400&auto=format&fit=crop"),
-  portOperations: unsplash("1601311852860-1d8f42381551", "q=80&w=1800&auto=format&fit=crop"),
-  dieselGeneratorInspection: unsplash("1636867759143-c28c1e909bd3", "q=80&w=1400&auto=format&fit=crop"),
-  generatorMaintenance: unsplash("1637296001293-43ec1ac4e5ed", "q=80&w=1400&auto=format&fit=crop"),
-  tugboatAtSea: unsplash("1558613812-da76d80cca11", "q=80&w=1800&auto=format&fit=crop"),
-  tugboatHarbor: unsplash("1527314392553-2c7bded21b23", "q=80&w=1400&auto=format&fit=crop"),
-  engineerHardhat: unsplash("1621905253185-95614217f357", "q=80&w=1400&auto=format&fit=crop"),
-  engineerWorkwear: unsplash("1567954970774-58d6aa6c50dc", "q=80&w=1400&auto=format&fit=crop"),
+  heroEngineRoom: A,
+  engineRoomWide: B,
+  engineCloseup: C,
+  engineParts: D,
+  shipEngineDetail: E,
+  technicianAtWork: F,
+  technicianDiagnostic: G,
+  technicianTools: H,
+  welderAtWork: I,
+  welderSparks: J,
+  cargoPortCranes: K,
+  cargoShipDocked: A,
+  portOperations: B,
+  dieselGeneratorInspection: C,
+  generatorMaintenance: D,
+  tugboatAtSea: E,
+  tugboatHarbor: F,
+  engineerHardhat: G,
+  engineerWorkwear: H,
 } as const;
 
 export type ImageKey = keyof typeof images;

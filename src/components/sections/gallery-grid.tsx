@@ -37,7 +37,6 @@ export function GalleryGrid({ items }: { items: GalleryItem[] }) {
 
   const visibleItems =
     filter === "all" ? items : items.filter((item) => item.type === filter);
-  const videoCount = items.filter((item) => item.type === "video").length;
 
   useEffect(() => {
     if (!carouselApi) return;
@@ -116,13 +115,6 @@ export function GalleryGrid({ items }: { items: GalleryItem[] }) {
             </button>
           ))}
         </div>
-      )}
-
-      {videoCount > 0 && filter === "all" && (
-        <p className="mt-6 text-xs text-muted-foreground">
-          Video clips are placeholder footage standing in for real project
-          documentation.
-        </p>
       )}
 
       <Dialog
