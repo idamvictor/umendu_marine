@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { List, ArrowRight, WhatsappLogo } from "@phosphor-icons/react";
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
@@ -28,6 +28,7 @@ import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
   const pathname = usePathname();
+  const router = useRouter();
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   return (
@@ -46,6 +47,10 @@ export function SiteHeader() {
                 return (
                   <NavigationMenuItem key={link.label}>
                     <NavigationMenuTrigger
+                      onClick={(event) => {
+                        event.preventDefault();
+                        router.push(link.href);
+                      }}
                       className={cn(
                         "bg-transparent text-[13.5px] font-medium transition-colors hover:!bg-white/8 focus:!bg-white/8 data-open:!bg-white/8",
                         isActive
@@ -148,9 +153,14 @@ export function SiteHeader() {
                 if ("children" in link && link.children) {
                   return (
                     <div key={link.label} className="flex flex-col">
-                      <span className="px-3 pt-3 pb-1 text-xs font-medium tracking-wide text-muted-foreground uppercase">
-                        {link.label}
-                      </span>
+                      <SheetClose asChild>
+                        <Link
+                          href={link.href}
+                          className="px-3 pt-3 pb-1 text-xs font-medium tracking-wide text-muted-foreground uppercase transition-colors hover:text-foreground"
+                        >
+                          {link.label}
+                        </Link>
+                      </SheetClose>
                       {link.children.map((child) => {
                         const isChildActive = pathname === child.href;
                         return (

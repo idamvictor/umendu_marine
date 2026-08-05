@@ -11,7 +11,17 @@ import {
 import { PageIntro } from "@/components/sections/page-intro";
 import { OfferList, type OfferItem } from "@/components/sections/offer-list";
 import { CtaBand } from "@/components/sections/cta-band";
-import { images } from "@/lib/images";
+
+function unsplash(id: string, params = "q=80&auto=format&fit=crop") {
+  return `https://images.unsplash.com/photo-${id}?${params}`;
+}
+
+const stockImages = {
+  cargoShipDocked: unsplash("1670121180530-cfcba4438038", "q=80&w=1400&auto=format&fit=crop"),
+  portOperations: unsplash("1601311852860-1d8f42381551", "q=80&w=1800&auto=format&fit=crop"),
+  tugboatHarbor: unsplash("1527314392553-2c7bded21b23", "q=80&w=1400&auto=format&fit=crop"),
+  welderAtWork: unsplash("1455165814004-1126a7199f9b", "q=80&w=1400&auto=format&fit=crop"),
+} as const;
 
 export const metadata: Metadata = {
   title: "Other Services",
@@ -65,7 +75,7 @@ export default function OtherServicesPage() {
         eyebrow="Other Services"
         title="Full support for your marine operations"
         description="We know marine operations require more than engine repairs. That's why we offer a wider range of services to support the full scope of your maritime needs."
-        images={[images.cargoShipDocked, images.portOperations, images.tugboatHarbor]}
+        images={[stockImages.cargoShipDocked, stockImages.portOperations, stockImages.tugboatHarbor]}
       />
 
       <OfferList heading="What we offer" items={offers} />
@@ -75,7 +85,7 @@ export default function OtherServicesPage() {
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
             <div className="relative flex min-h-80 flex-col justify-end overflow-hidden rounded-lg p-7">
               <Image
-                src={images.tugboatHarbor}
+                src={stockImages.tugboatHarbor}
                 alt="Tugboat available for hire in harbor"
                 fill
                 sizes="(min-width: 1024px) 45vw, 90vw"
@@ -94,7 +104,7 @@ export default function OtherServicesPage() {
             </div>
             <div className="relative flex min-h-80 flex-col justify-end overflow-hidden rounded-lg p-7">
               <Image
-                src={images.welderAtWork}
+                src={stockImages.welderAtWork}
                 alt="Technician available for on-site marine work"
                 fill
                 sizes="(min-width: 1024px) 45vw, 90vw"

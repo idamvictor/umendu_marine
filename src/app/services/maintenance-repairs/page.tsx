@@ -19,7 +19,16 @@ import { CtaBand } from "@/components/sections/cta-band";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { engineBrands, contact } from "@/lib/site";
-import { images } from "@/lib/images";
+
+function unsplash(id: string, params = "q=80&auto=format&fit=crop") {
+  return `https://images.unsplash.com/photo-${id}?${params}`;
+}
+
+const stockImages = {
+  engineCloseup: unsplash("1523559094051-53bac879eb80", "q=80&w=1400&auto=format&fit=crop"),
+  generatorMaintenance: unsplash("1637296001293-43ec1ac4e5ed", "q=80&w=1400&auto=format&fit=crop"),
+  shipEngineDetail: unsplash("1608062720349-a044e289748b", "q=80&w=1400&auto=format&fit=crop"),
+} as const;
 
 export const metadata: Metadata = {
   title: "Maintenance & Repairs",
@@ -90,7 +99,7 @@ export default function MaintenanceRepairsPage() {
         eyebrow="Maintenance & Repairs"
         title="Diesel engine maintenance and repair you can trust"
         description="Keeping your engines running smoothly is at the core of what we do. Our team provides comprehensive maintenance and repair services for diesel engines across all major brands, minimizing downtime and extending the life of your equipment."
-        images={[images.engineCloseup, images.generatorMaintenance, images.shipEngineDetail]}
+        images={[stockImages.engineCloseup, stockImages.generatorMaintenance, stockImages.shipEngineDetail]}
       />
 
       <section className="border-b bg-background py-16 lg:py-20">
@@ -119,7 +128,7 @@ export default function MaintenanceRepairsPage() {
             </div>
             <div className="aspect-[4/3] overflow-hidden rounded-lg">
               <Image
-                src={images.engineCloseup}
+                src={stockImages.engineCloseup}
                 alt="Close view of a diesel engine block during maintenance"
                 width={900}
                 height={675}

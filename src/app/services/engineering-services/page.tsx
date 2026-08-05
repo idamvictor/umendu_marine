@@ -12,7 +12,17 @@ import { PageIntro } from "@/components/sections/page-intro";
 import { OfferList, type OfferItem } from "@/components/sections/offer-list";
 import { CtaBand } from "@/components/sections/cta-band";
 import { Button } from "@/components/ui/button";
-import { images } from "@/lib/images";
+
+function unsplash(id: string, params = "q=80&auto=format&fit=crop") {
+  return `https://images.unsplash.com/photo-${id}?${params}`;
+}
+
+const stockImages = {
+  technicianDiagnostic: unsplash("1621905251918-48416bd8575a", "q=80&w=1400&auto=format&fit=crop"),
+  dieselGeneratorInspection: unsplash("1636867759143-c28c1e909bd3", "q=80&w=1400&auto=format&fit=crop"),
+  engineerWorkwear: unsplash("1567954970774-58d6aa6c50dc", "q=80&w=1400&auto=format&fit=crop"),
+  generatorMaintenance: unsplash("1637296001293-43ec1ac4e5ed", "q=80&w=1400&auto=format&fit=crop"),
+} as const;
 
 export const metadata: Metadata = {
   title: "Engineering Services",
@@ -84,7 +94,7 @@ export default function EngineeringServicesPage() {
         eyebrow="Engineering Services"
         title="Technical expertise for complex engineering challenges"
         description="Our engineering services go beyond repairs. We bring technical insight and consultancy to help clients diagnose problems, plan projects, and maintain their vessels to the highest standard."
-        images={[images.technicianDiagnostic, images.dieselGeneratorInspection, images.engineerWorkwear]}
+        images={[stockImages.technicianDiagnostic, stockImages.dieselGeneratorInspection, stockImages.engineerWorkwear]}
       />
 
       <section className="border-b bg-background py-16 lg:py-20">
@@ -92,7 +102,7 @@ export default function EngineeringServicesPage() {
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
             <div className="aspect-[4/3] overflow-hidden rounded-lg">
               <Image
-                src={images.generatorMaintenance}
+                src={stockImages.generatorMaintenance}
                 alt="Close view of a marine diesel generator during technical work"
                 width={900}
                 height={675}
