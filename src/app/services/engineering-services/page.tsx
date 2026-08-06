@@ -21,7 +21,6 @@ const stockImages = {
   technicianDiagnostic: unsplash("1621905251918-48416bd8575a", "q=80&w=1400&auto=format&fit=crop"),
   dieselGeneratorInspection: unsplash("1636867759143-c28c1e909bd3", "q=80&w=1400&auto=format&fit=crop"),
   engineerWorkwear: unsplash("1567954970774-58d6aa6c50dc", "q=80&w=1400&auto=format&fit=crop"),
-  generatorMaintenance: unsplash("1637296001293-43ec1ac4e5ed", "q=80&w=1400&auto=format&fit=crop"),
 } as const;
 
 export const metadata: Metadata = {
@@ -102,7 +101,7 @@ export default function EngineeringServicesPage() {
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
             <div className="aspect-[4/3] overflow-hidden rounded-lg">
               <Image
-                src={stockImages.generatorMaintenance}
+                src="https://m.media-amazon.com/images/I/81GmlWVaEDL._AC_UF894,1000_QL80_.jpg"
                 alt="Close view of a marine diesel generator during technical work"
                 width={900}
                 height={675}

@@ -128,7 +128,7 @@ export default function MaintenanceRepairsPage() {
             </div>
             <div className="aspect-[4/3] overflow-hidden rounded-lg">
               <Image
-                src={stockImages.engineCloseup}
+                src="https://res.cloudinary.com/dyp8gtllq/image/upload/v1785873839/WhatsApp_Image_2026-08-04_at_3.50.51_PM_wpn6xp.jpg"
                 alt="Close view of a diesel engine block during maintenance"
                 width={900}
                 height={675}

@@ -1,5 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+
+const LOGO_SRC =
+  "https://res.cloudinary.com/dyp8gtllq/image/upload/v1786042065/WhatsApp_Image_2026-08-06_at_11.10.17_AM_cvi1bz.jpg";
 
 export function Logo({ className }: { className?: string }) {
   return (
@@ -10,8 +14,8 @@ export function Logo({ className }: { className?: string }) {
         className
       )}
     >
-      <span className="flex size-9 items-center justify-center rounded-md bg-primary font-mono text-[13px] font-bold tracking-tight text-primary-foreground">
-        UM
+      <span className="relative size-9 shrink-0 overflow-hidden rounded-md">
+        <Image src={LOGO_SRC} alt="Umendu Marine logo" fill sizes="36px" className="object-cover" />
       </span>
       <span className="flex flex-col leading-none">
         <span className="text-[15px] font-semibold tracking-tight">
