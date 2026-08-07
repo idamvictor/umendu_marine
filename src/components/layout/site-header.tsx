@@ -112,7 +112,7 @@ export function SiteHeader() {
         </NavigationMenu>
 
         <div className="hidden items-center gap-2 lg:flex">
-          <Button asChild variant="ghost" className="text-ink-foreground hover:!bg-white/8 hover:!text-ink-foreground focus:!bg-white/8">
+          <Button asChild variant="whatsapp">
             <a href={whatsappHref("Hello, I'd like to speak with an engineer about my vessel.")} target="_blank" rel="noopener noreferrer">
               <WhatsappLogo data-icon="inline-start" weight="fill" />
               WhatsApp
@@ -201,7 +201,7 @@ export function SiteHeader() {
               })}
             </nav>
             <SheetFooter className="border-t">
-              <Button asChild variant="outline">
+              <Button asChild variant="whatsapp">
                 <a href={whatsappHref("Hello, I'd like to speak with an engineer about my vessel.")} target="_blank" rel="noopener noreferrer">
                   <WhatsappLogo data-icon="inline-start" weight="fill" />
                   WhatsApp

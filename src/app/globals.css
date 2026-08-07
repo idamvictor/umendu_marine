@@ -40,6 +40,8 @@
   --color-secondary: var(--secondary);
   --color-primary-foreground: var(--primary-foreground);
   --color-primary: var(--primary);
+  --color-whatsapp-foreground: var(--whatsapp-foreground);
+  --color-whatsapp: var(--whatsapp);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
@@ -66,6 +68,10 @@
   --popover-foreground: oklch(0.19 0.006 260);
   --primary: oklch(0.685 0.153 55);
   --primary-foreground: oklch(0.16 0.02 55);
+  /* WhatsApp brand green -- kept as the literal brand hex (not converted to
+     oklch like the rest of this file) for exact fidelity to WhatsApp's mark. */
+  --whatsapp: #25d366;
+  --whatsapp-foreground: oklch(1 0 0);
   --secondary: oklch(0.955 0.003 260);
   --secondary-foreground: oklch(0.19 0.006 260);
   --muted: oklch(0.955 0.003 260);
@@ -108,6 +114,8 @@
   --popover-foreground: oklch(0.97 0.003 90);
   --primary: oklch(0.685 0.153 55);
   --primary-foreground: oklch(0.16 0.02 55);
+  --whatsapp: #25d366;
+  --whatsapp-foreground: oklch(1 0 0);
   --secondary: oklch(0.29 0.008 260);
   --secondary-foreground: oklch(0.97 0.003 90);
   --muted: oklch(0.29 0.008 260);

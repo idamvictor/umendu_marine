@@ -71,12 +71,7 @@ export function HomeHero() {
                 <ArrowRight data-icon="inline-end" />
               </Link>
             </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white"
-            >
+            <Button asChild size="lg" variant="whatsapp">
               <a
                 href={whatsappHref("Hello, I'd like to speak with an engineer about my vessel.")}
                 target="_blank"

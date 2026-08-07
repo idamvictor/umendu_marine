@@ -34,12 +34,7 @@ export function CtaBand({
                   <ArrowRight data-icon="inline-end" />
                 </Link>
               </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-ink-border bg-transparent text-ink-foreground hover:bg-white/8 hover:text-ink-foreground"
-              >
+              <Button asChild size="lg" variant="whatsapp">
                 <a
                   href={whatsappHref("Hello, I'd like to speak with an engineer about my vessel.")}
                   target="_blank"

@@ -15,6 +15,7 @@ import { ContactForm } from "@/components/sections/contact-form";
 import { ContactMap } from "@/components/sections/contact-map";
 import { contact, whatsappHref } from "@/lib/site";
 import { images } from "@/lib/images";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -35,10 +36,17 @@ const details = [
     href: contact.phoneHref,
   },
   {
+    icon: Phone,
+    label: "Alternate Phone",
+    value: contact.alternatePhoneDisplay,
+    href: contact.alternatePhoneHref,
+  },
+  {
     icon: WhatsappLogo,
     label: "WhatsApp",
     value: contact.mobileDisplay,
     href: whatsappHref("Hello, I'd like to speak with an engineer about my vessel."),
+    tone: "whatsapp" as const,
   },
   {
     icon: EnvelopeSimple,
@@ -97,7 +105,12 @@ export default function ContactPage() {
               <ul className="mt-6 flex flex-col gap-6">
                 {details.map((detail) => (
                   <li key={detail.label} className="flex items-start gap-3">
-                    <detail.icon className="mt-0.5 size-5 shrink-0 text-primary" />
+                    <detail.icon
+                      className={cn(
+                        "mt-0.5 size-5 shrink-0",
+                        detail.tone === "whatsapp" ? "text-whatsapp" : "text-primary"
+                      )}
+                    />
                     <div>
                       <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
                         {detail.label}
@@ -107,7 +120,10 @@ export default function ContactPage() {
                           href={detail.href}
                           target={detail.href.startsWith("http") ? "_blank" : undefined}
                           rel={detail.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                          className="text-[15px] font-medium hover:text-primary"
+                          className={cn(
+                            "text-[15px] font-medium",
+                            detail.tone === "whatsapp" ? "hover:text-whatsapp" : "hover:text-primary"
+                          )}
                         >
                           {detail.value}
                         </a>

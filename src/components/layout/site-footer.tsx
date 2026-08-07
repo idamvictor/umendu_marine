@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { MapPin, Phone, EnvelopeSimple, WhatsappLogo, Clock } from "@phosphor-icons/react/dist/ssr";
 import { Logo } from "@/components/logo";
+import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { contact, engineBrands, navLinks } from "@/lib/site";
 import { whatsappHref } from "@/lib/site";
@@ -19,15 +20,16 @@ export function SiteFooter() {
               consultancy, and full-spectrum marine support for fleets across
               Nigeria.
             </p>
-            <a
-              href={whatsappHref("Hello, I'd like to speak with an engineer about my vessel.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 rounded-md border border-ink-border px-3.5 py-2 text-sm font-medium text-ink-foreground transition-colors hover:bg-white/8"
-            >
-              <WhatsappLogo weight="fill" className="size-4 text-primary" />
-              Chat on WhatsApp
-            </a>
+            <Button asChild variant="whatsapp" className="mt-6">
+              <a
+                href={whatsappHref("Hello, I'd like to speak with an engineer about my vessel.")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <WhatsappLogo data-icon="inline-start" weight="fill" />
+                Chat on WhatsApp
+              </a>
+            </Button>
           </div>
 
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-8">
@@ -89,6 +91,12 @@ export function SiteFooter() {
                   <Phone className="size-4 shrink-0 text-primary" />
                   <a href={contact.mobileHref} className="hover:text-ink-foreground">
                     {contact.mobileDisplay}
+                  </a>
+                </li>
+                <li className="flex items-center gap-2.5">
+                  <Phone className="size-4 shrink-0 text-primary" />
+                  <a href={contact.alternatePhoneHref} className="hover:text-ink-foreground">
+                    {contact.alternatePhoneDisplay}
                   </a>
                 </li>
                 <li className="flex items-center gap-2.5">

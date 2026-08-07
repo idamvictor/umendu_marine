@@ -358,7 +358,7 @@ Whether it's an urgent repair, a technical consultation, or a service inquiry â€
 Office Address: 14 Woji Road, GRA Phase 2, Port Harcourt, Rivers State, Nigeria
 Phone: +234 84 461 2200
 WhatsApp: +234 803 214 7765
-Email: info@umendumarine.com
+Email: umenduengineeringservicesltd@gmail.com
 Business Hours: Mon - Sat, 8:00am - 6:00pm | Emergency Line: answered 24/7
 
 **Contact Form Fields:**
