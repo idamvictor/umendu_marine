@@ -46,7 +46,7 @@ const representativeProjects: ProjectProfile[] = [
       "Laser alignment and final sea-trial load testing",
     ],
     operationalOutcome: "Successfully restored compression and returned the engine to full charter capability in 14 days.",
-    image: images.engineRoomWide,
+    image: "https://res.cloudinary.com/dyp8gtllq/image/upload/v1786141165/ee_v0jizz.jpg",
     imageAlt: "Overhauled marine propulsion engine in vessel engine room",
   },
   {
@@ -62,7 +62,7 @@ const representativeProjects: ProjectProfile[] = [
       "ECU software diagnostic checks & error code clearance",
     ],
     operationalOutcome: "Pinpointed electrical contact issue, resolved power drop, and cleared error codes in 36 hours of callout.",
-    image: images.technicianDiagnostic,
+    image: "https://res.cloudinary.com/dyp8gtllq/image/upload/v1786178161/621543749_17953945659063925_7557575525579416163_n_wocuq8.jpg",
     imageAlt: "Technician performing diagnostics on common rail diesel control system",
   },
   {
